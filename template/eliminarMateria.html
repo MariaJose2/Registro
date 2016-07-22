@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+{% block contenido%}
+	
+	<br><br>
+	<h3>¿Desea eliminar la Materia {{materia.Nombre}} <br><br><br>
+	<a href="../eliminarMateria?Codigo={{materia.Codigo}}" class="btn btn-danger"></a>
+	<a href="../Registro">
+		<button class="btn btn-link">
+		 	<span class="glyphicon glyphicon-arrow-left"></span>	 
+	 		<span class="glyphicon glyphicon-list"></span>	 			
+	 	</button>
+	 </a>
+	</h3>
+		
+{% endblock contenido %}

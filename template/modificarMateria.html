@@ -1,0 +1,8 @@
+{% extends 'index.html' %}
+{% block contenido%}
+	<form class="container" role="form" method="POST" action="">{% csrf_token %}
+		{{form.as_p}}
+		<input type="submit" value="Guardar"><br>	
+	</form>
+			
+{% endblock contenido %}

@@ -1,0 +1,86 @@
+{% extends 'index.html' %}
+{% block contenido%}
+	 <a href="crearAlumno">
+		 <button class="btn btn-link">
+	 		<span class="glyphicon glyphicon-plus"></span>
+	 		<span class="glyphicon glyphicon-user"></span>	 		
+	 	</button>
+	 </a>		
+				<table class="table table-hover" >
+					<tr class="alert alert-success"><center><h4><strong>LISTADO DE ESTUDIANTES MATRICULADOS</strong></h4></center></tr>	
+					<tr>
+						<td><b>Cedula</b></td>
+						<td><b>Nombres</b></td>
+						<td><b>Apellidos</b></td>						
+						<td><b>Correo</b></td>
+						<td><b>Telefono</b></td>
+						<td><b>Direccion</b></td>
+
+					{% for alu in Alumno %}
+					<tr>
+						<td>
+						<a href="eliminarAlumno?Cedula={{alu.Cedula}}">
+						Eliminar Alumno </a>
+						<a href="modificarAlumno?Cedula={{alu.Cedula}}">{{alu.Cedula}}</a></td>
+						<td>{{cl.Nombres}}</td>
+						<td>{{cl.Apellidos}}</td>						
+						<td>{{cl.Correo}}</td>
+						<td>{{cl.Telefono}}</td>
+						<td>{{cl.Direccion}}</td>
+						
+	 						<a href="">
+	 							<button class="btn btn-link">
+	 							<span class="glyphicon glyphicon-minus"></span>
+	 							<span class="glyphicon glyphicon-user"></span>	 		
+	 							</button>						
+	 						</a>
+	 						<a href="">	
+	 							<button class="btn btn-link">
+		 						<span class="glyphicon glyphicon-plus"></span>	 
+	 							<span class="glyphicon glyphicon-user"></span>	 			
+	 							</button> 						
+	 						</a>
+	 					</td>
+
+					{% endfor %}
+					</tr>
+				</table>
+
+				<table class="table table-hover" >
+					<tr class="alert alert-success"><center><h4><strong>LISTADO DE MATERIAS</strong></h4></center></tr>	
+					<tr>
+						<td><b>Codigo</b></td>
+						<td><b>Nombre</b></td>
+						<td><b>Creditos</b></td>						
+						<td><b>Cupos</b></td>
+						<td><b>EstuMatriculados</b></td>
+
+					{% for mate in Materias %}
+					<tr>
+						<td>
+						<a href="eliminarMateria?Codigo={{mate.Codigo}}">
+						Eliminar Materia </a>
+						<a href="modificarMateria?Codigo={{mate.Codigo}}">{{mate.Codigo}}</a></td>
+						<td>{{mate.Nombre}}</td>
+						<td>{{mate.Creditos}}</td>						
+						<td>{{mate.Cupos}}</td>
+						<td>{{mate.EstuMatriculados}}</td>
+						
+	 						<a href="">
+	 							<button class="btn btn-link">
+	 							<span class="glyphicon glyphicon-minus"></span>
+	 							<span class="glyphicon glyphicon-user"></span>	 		
+	 							</button>						
+	 						</a>
+	 						<a href="">	
+	 							<button class="btn btn-link">
+		 						<span class="glyphicon glyphicon-plus"></span>	 
+	 							<span class="glyphicon glyphicon-user"></span>	 			
+	 							</button> 						
+	 						</a>
+	 					</td>
+
+					{% endfor %}
+					</tr>
+				</table>
+{% endblock contenido %}

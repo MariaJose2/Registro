@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% block contenido%}
+	
+	<br><br>
+	<h3>¿Desea eliminar al Estudiante {{alumno.Nombres}} {{alumno.Apellidos}} ?
+	<br><br><br>
+	<a href="../eliminarAlumno?Cedula={{alumno.Cedula}}" class="btn btn-danger"></a>
+	<a href="../Registro">
+		<button class="btn btn-link">
+		 	<span class="glyphicon glyphicon-arrow-left"></span>	 
+	 		<span class="glyphicon glyphicon-list"></span>	 			
+	 	</button>
+	 </a>
+	</h3>
+		
+{% endblock contenido %}

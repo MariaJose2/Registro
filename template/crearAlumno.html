@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+{% block contenido%}
+	<title>CREAR ALUMNO</title>
+	<H4>FORMULARIO ALUMNO</H4>
+	<form class="container" role="form" method="POST" action="">{% csrf_token %}
+		{{form.as_p}}
+		<br>	
+		<input type="submit" value="Aceptar">
+	</form>
+	<a href="../Registro">
+		 <button class="btn btn-link">
+		 	<span class="glyphicon glyphicon-arrow-left"></span>	 
+	 		<span class="glyphicon glyphicon-list"></span>	 			
+	 	</button>
+	 </a>
+	
+{% endblock contenido %}
